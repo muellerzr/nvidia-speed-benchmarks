@@ -1,0 +1,33 @@
+Benchmark started on 2025-05-10 10:39:47
+
+** Command line:
+/home/zach/miniconda3/envs/torch/bin/python3 mamf-finder.py --m_range 0 20480 256 --n 4096 --k 4096 --output_file=powerlimit_results/140w.txt
+
+** Dtype: torch.bfloat16
+
+** Platform/Device info:
+Linux workhorse 6.8.0-59-generic #61~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 15 17:03:15 UTC 2 x86_64 x86_64
+_CudaDeviceProperties(name='NVIDIA GeForce RTX 3060', major=8, minor=6, total_memory=12037MB, multi_processor_count=28, uuid=8910a5c8-9066-d703-493c-d2c933137e68, L2_cache_size=2MB)
+
+** Critical software versions:
+torch=2.6.0+cu124
+cuda=12.4
+
+** Additional notes:
+benchmark version: 2
+
+
+--------------------------------------------------------------------------------
+
+
+Warming up the accelerator for 30 secs ... accelerator warmup finished
+
+Tried  79 shapes => the best outcomes were:
+mean:   27.5 TFLOPS @ 3584x4096x4096 (MxNxK)
+median: 27.5 TFLOPS @ 3584x4096x4096 (MxNxK)
+max:    27.5 TFLOPS @ 3584x4096x4096 (MxNxK)
+
+geomean: 26.6 TFLOPS for 79 shapes in range: m=[0, 20480, 256] | n=[4096] | k=[4096]
+
+Legend: TFLOPS = 10**12 FLOPS
+Elapsed time: 0:03:18

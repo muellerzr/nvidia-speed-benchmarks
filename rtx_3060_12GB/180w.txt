@@ -1,0 +1,114 @@
+
+Benchmark started on 2025-05-10 11:03:53
+
+** Command line:
+/home/zach/miniconda3/envs/torch/bin/python mamf-finder.py --m_range 0 20480 256 --n 4096 --k 4096 --output_file=powerlimit_results/180w.txt --dtype float16
+
+** Dtype: torch.float16
+
+** Platform/Device info:
+Linux workhorse 6.8.0-59-generic #61~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 15 17:03:15 UTC 2 x86_64 x86_64
+_CudaDeviceProperties(name='NVIDIA GeForce RTX 3060', major=8, minor=6, total_memory=12037MB, multi_processor_count=28, uuid=8910a5c8-9066-d703-493c-d2c933137e68, L2_cache_size=2MB)
+
+** Critical software versions:
+torch=2.6.0+cu124
+cuda=12.4
+
+** Additional notes:
+benchmark version: 2
+
+
+--------------------------------------------------------------------------------
+
+
+Warming up the accelerator for 30 secs ... accelerator warmup finished
+     1 |   25.6(mean)   25.7(median)   25.8(max) @ 256x4096x4096        | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     2 |   25.4(mean)   25.4(median)   25.4(max) @ 512x4096x4096        | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     3 |   25.2(mean)   25.2(median)   25.2(max) @ 768x4096x4096        | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     4 |   25.2(mean)   25.2(median)   25.2(max) @ 1024x4096x4096       | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     5 |   25.3(mean)   25.3(median)   25.3(max) @ 1280x4096x4096       | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     6 |   25.2(mean)   25.3(median)   25.3(max) @ 1536x4096x4096       | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     7 |   25.2(mean)   25.2(median)   25.2(max) @ 1792x4096x4096       | best:   25.6(mean)   25.7(median)   25.8(max) TFLOPS
+     8 |   26.8(mean)   26.8(median)   26.8(max) @ 2048x4096x4096       | best:   26.8(mean)   26.8(median)   26.8(max) TFLOPS
+     9 |   25.2(mean)   25.2(median)   25.2(max) @ 2304x4096x4096       | best:   26.8(mean)   26.8(median)   26.8(max) TFLOPS
+    10 |   26.5(mean)   26.5(median)   26.5(max) @ 2560x4096x4096       | best:   26.8(mean)   26.8(median)   26.8(max) TFLOPS
+    11 |   26.4(mean)   26.4(median)   26.4(max) @ 2816x4096x4096       | best:   26.8(mean)   26.8(median)   26.8(max) TFLOPS
+    12 |   26.2(mean)   26.2(median)   26.2(max) @ 3072x4096x4096       | best:   26.8(mean)   26.8(median)   26.8(max) TFLOPS
+    13 |   27.2(mean)   27.2(median)   27.2(max) @ 3328x4096x4096       | best:   27.2(mean)   27.2(median)   27.2(max) TFLOPS
+    14 |   26.1(mean)   26.2(median)   26.2(max) @ 3584x4096x4096       | best:   27.2(mean)   27.2(median)   27.2(max) TFLOPS
+    15 |   26.4(mean)   26.4(median)   26.4(max) @ 3840x4096x4096       | best:   27.2(mean)   27.2(median)   27.2(max) TFLOPS
+    16 |   26.4(mean)   26.4(median)   26.5(max) @ 4096x4096x4096       | best:   27.2(mean)   27.2(median)   27.2(max) TFLOPS
+    17 |   26.8(mean)   26.8(median)   26.8(max) @ 4352x4096x4096       | best:   27.2(mean)   27.2(median)   27.2(max) TFLOPS
+    18 |   27.0(mean)   27.0(median)   27.1(max) @ 4608x4096x4096       | best:   27.2(mean)   27.2(median)   27.2(max) TFLOPS
+    19 |   27.2(mean)   27.2(median)   27.3(max) @ 4864x4096x4096       | best:   27.2(mean)   27.2(median)   27.3(max) TFLOPS
+    20 |   27.4(mean)   27.4(median)   27.4(max) @ 5120x4096x4096       | best:   27.4(mean)   27.4(median)   27.4(max) TFLOPS
+    21 |   27.6(mean)   27.6(median)   27.6(max) @ 5376x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    22 |   26.8(mean)   26.8(median)   26.8(max) @ 5632x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    23 |   27.0(mean)   27.0(median)   27.0(max) @ 5888x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    24 |   27.1(mean)   27.1(median)   27.1(max) @ 6144x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    25 |   27.2(mean)   27.2(median)   27.2(max) @ 6400x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    26 |   27.4(mean)   27.4(median)   27.4(max) @ 6656x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    27 |   27.5(mean)   27.5(median)   27.5(max) @ 6912x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    28 |   27.6(mean)   27.6(median)   27.6(max) @ 7168x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    29 |   27.0(mean)   27.0(median)   27.0(max) @ 7424x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    30 |   27.1(mean)   27.0(median)   27.2(max) @ 7680x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    31 |   27.1(mean)   27.1(median)   27.1(max) @ 7936x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    32 |   27.2(mean)   27.2(median)   27.2(max) @ 8192x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    33 |   27.3(mean)   27.3(median)   27.3(max) @ 8448x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    34 |   27.4(mean)   27.4(median)   27.4(max) @ 8704x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    35 |   27.5(mean)   27.5(median)   27.5(max) @ 8960x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    36 |   27.0(mean)   27.0(median)   27.0(max) @ 9216x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    37 |   27.1(mean)   27.1(median)   27.1(max) @ 9472x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    38 |   27.1(mean)   27.1(median)   27.2(max) @ 9728x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    39 |   27.2(mean)   27.2(median)   27.2(max) @ 9984x4096x4096       | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    40 |   27.3(mean)   27.3(median)   27.3(max) @ 10240x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    41 |   27.4(mean)   27.4(median)   27.4(max) @ 10496x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    42 |   27.5(mean)   27.5(median)   27.5(max) @ 10752x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    43 |   27.1(mean)   27.1(median)   27.1(max) @ 11008x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    44 |   27.2(mean)   27.2(median)   27.2(max) @ 11264x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    45 |   27.2(mean)   27.2(median)   27.2(max) @ 11520x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    46 |   27.3(mean)   27.3(median)   27.3(max) @ 11776x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    47 |   27.3(mean)   27.3(median)   27.4(max) @ 12032x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    48 |   27.4(mean)   27.4(median)   27.4(max) @ 12288x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    49 |   27.5(mean)   27.5(median)   27.5(max) @ 12544x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    50 |   27.1(mean)   27.2(median)   27.2(max) @ 12800x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    51 |   27.1(mean)   27.1(median)   27.1(max) @ 13056x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    52 |   27.2(mean)   27.2(median)   27.2(max) @ 13312x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    53 |   27.2(mean)   27.2(median)   27.2(max) @ 13568x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    54 |   27.3(mean)   27.3(median)   27.3(max) @ 13824x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    55 |   27.3(mean)   27.3(median)   27.3(max) @ 14080x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    56 |   27.4(mean)   27.4(median)   27.4(max) @ 14336x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    57 |   27.1(mean)   27.1(median)   27.1(max) @ 14592x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    58 |   27.2(mean)   27.2(median)   27.2(max) @ 14848x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    59 |   27.2(mean)   27.2(median)   27.2(max) @ 15104x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    60 |   27.2(mean)   27.2(median)   27.2(max) @ 15360x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    61 |   27.3(mean)   27.3(median)   27.3(max) @ 15616x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    62 |   27.3(mean)   27.3(median)   27.3(max) @ 15872x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    63 |   27.4(mean)   27.4(median)   27.4(max) @ 16128x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    64 |   27.2(mean)   27.2(median)   27.2(max) @ 16384x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    65 |   27.2(mean)   27.2(median)   27.2(max) @ 16640x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    66 |   27.1(mean)   27.1(median)   27.2(max) @ 16896x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    67 |   27.1(mean)   27.1(median)   27.1(max) @ 17152x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    68 |   27.1(mean)   27.1(median)   27.2(max) @ 17408x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    69 |   27.2(mean)   27.2(median)   27.2(max) @ 17664x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    70 |   27.2(mean)   27.2(median)   27.2(max) @ 17920x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    71 |   27.0(mean)   27.0(median)   27.1(max) @ 18176x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    72 |   27.1(mean)   27.1(median)   27.1(max) @ 18432x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    73 |   27.1(mean)   27.1(median)   27.1(max) @ 18688x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    74 |   27.1(mean)   27.1(median)   27.1(max) @ 18944x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    75 |   27.1(mean)   27.1(median)   27.2(max) @ 19200x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    76 |   27.2(mean)   27.2(median)   27.2(max) @ 19456x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    77 |   27.2(mean)   27.2(median)   27.2(max) @ 19712x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    78 |   27.0(mean)   27.0(median)   27.1(max) @ 19968x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+    79 |   27.0(mean)   27.1(median)   27.1(max) @ 20224x4096x4096      | best:   27.6(mean)   27.6(median)   27.6(max) TFLOPS
+
+
+Tried  79 shapes => the best outcomes were:
+mean:   27.6 TFLOPS @ 7168x4096x4096 (MxNxK)
+median: 27.6 TFLOPS @ 7168x4096x4096 (MxNxK)
+max:    27.6 TFLOPS @ 7168x4096x4096 (MxNxK)
+
+geomean: 26.9 TFLOPS for 79 shapes in range: m=[0, 20480, 256] | n=[4096] | k=[4096]
+
+Legend: TFLOPS = 10**12 FLOPS
+Elapsed time: 0:03:15
